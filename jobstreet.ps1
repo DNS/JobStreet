@@ -1,3 +1,4 @@
+# jobstreet.ps1 — Show available jobs with salary > 80jt
 
 $a = iwr 'https://id.jobstreet.com/jobs-in-information-communication-technology?salaryrange=80000000-&salarytype=monthly' | % Content
 
