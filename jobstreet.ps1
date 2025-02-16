@@ -5,6 +5,9 @@ $a = iwr 'https://id.jobstreet.com/jobs?salaryrange=80000000-&salarytype=monthly
 
 $m = $a -match '(?ims)window.SEEK_REDUX_DATA =(.+?);\n    '
 
+if (-not $m) { 'No jobs found!' ; exit }
+
+
 $j = $Matches[1] | ConvertFrom-Json
 $r = $j.results.results.jobs
 
