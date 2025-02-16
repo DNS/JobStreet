@@ -13,6 +13,7 @@ $r = $j.results.results.jobs
 foreach ($i in $j.results.results.jobs) {
 	if ($i.salaryLabel -and $i.salaryLabel -ne 0) {
 		$i.advertiser.description
+		'    ' + $i.roleId
 		'    ' + $i.listingDateDisplay
 		'    ' + $i.salaryLabel
 		''
