@@ -1,4 +1,4 @@
-# jobstreet.ps1 — Show available jobs with salary > 80jt, Search jobs
+# jobstreet.ps1 — Search jobs with specific keyword
 
 if ($args) {
 	$bulk_url = $args
@@ -7,6 +7,7 @@ if ($args) {
 }
 
 if (-not $bulk_url) {
+	Write-Output 'jobstreet.ps1 — Search jobs with specific keyword'
 	Write-Output 'Usage:'
 	Write-Output '	jobstreet [URL1] [URL2]'
 	Write-Output "	'[URL1]', '[URL2]', '[URL3]' | jobstreet"
