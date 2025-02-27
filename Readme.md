@@ -1,4 +1,4 @@
-**jobstreet.ps1 — Show available jobs with salary > 80jt**
+**jobstreet.ps1 — Search jobs with specific keyword
 
 ![screenshotscreenshot](https://raw.githubusercontent.com/DNS/JobStreet/refs/heads/master/screenshot.png)
 
