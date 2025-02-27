@@ -42,7 +42,7 @@ function job_search ($url) {
 	$m = $a -match '(?ims)window.SEEK_REDUX_DATA =(.+?);\n    '
 	if (-not $m) { 'No jobs found!' ; exit }
 	$j = $Matches[1] | ConvertFrom-Json
-	$m
+
 	''
 
 	foreach ($i in $j.results.results.jobs) {
@@ -66,7 +66,7 @@ function job_search ($url) {
 #job_max 'https://id.jobstreet.com/jobs-in-information-communication-technology?salaryrange=80000000-&salarytype=monthly'
 
 
-$args | %{ job_search "https://id.jobstreet.com/$_-jobs" }
+$bulk_url | %{ job_search "https://id.jobstreet.com/$_-jobs" }
 
 
 
