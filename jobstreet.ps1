@@ -1,4 +1,4 @@
-# jobstreet.ps1 — Search jobs with specific keyword
+﻿# jobstreet.ps1 — Search jobs with specific keyword
 
 if ($args) {
 	$bulk_url = $args
@@ -51,7 +51,9 @@ function job_search ($url) {
 			'    ' + $i.roleId
 			'    ' + $i.listingDateDisplay
 			'    ' + $i.salaryLabel
-			'    https://id.jobstreet.com/job/' + $i.advertiser.id
+			'    https://id.jobstreet.com/job/' + $i.solMetadata.jobId
+			'    https://id.jobstreet.com/jobs?advertiserid=' + $i.advertiser.id
+			
 			''
 			
 #		}
