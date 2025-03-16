@@ -51,7 +51,9 @@ function job_search ($url) {
 			'    ' + $i.roleId
 			'    ' + $i.listingDateDisplay
 			'    ' + $i.salaryLabel
+			'    https://id.jobstreet.com/job/' + $i.advertiser.id
 			''
+			
 #		}
 	}
 
@@ -64,9 +66,10 @@ function job_search ($url) {
 #job_max 'https://id.jobstreet.com/jobs-in-information-communication-technology?salaryrange=25000000-&salarytype=monthly'
 #job_max 'https://id.jobstreet.com/jobs-in-information-communication-technology?salaryrange=40000000-&salarytype=monthly'
 #job_max 'https://id.jobstreet.com/jobs-in-information-communication-technology?salaryrange=80000000-&salarytype=monthly'
+#https://id.jobstreet.com/$_-jobs-in-information-communication-technology
+#https://id.jobstreet.com/$_-jobs
 
-
-$bulk_url | %{ job_search "https://id.jobstreet.com/$_-jobs" }
+$bulk_url | %{ job_search "https://id.jobstreet.com/$_-jobs-in-information-communication-technology" }
 
 
 
