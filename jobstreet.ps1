@@ -35,7 +35,7 @@ function job_search ($url) {
 				"`t" + $match2.Groups[1].Value			# salary
 			}
 
-			"`t" + $base_url + $m.Groups[2].Value		# link
+			"`t" + $base_url + $m.Groups[2].Value -replace '\?type.*'		# link
 			
 			''
 		}
