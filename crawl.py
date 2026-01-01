@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 import json, sys, html2text
 
 options = webdriver.FirefoxOptions()
-#options.add_argument("-headless")
+options.add_argument("-headless")
 options.set_preference('javascript.enabled', False)
 
 # make sure you have no other instance of firefox running that uses this profile or it will throw an error without a helpful message

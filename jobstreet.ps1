@@ -22,15 +22,15 @@ foreach ($m in $match1) {
 	if ($m.Groups[2].Value -match '^/job/') {
 		$m.Groups[3].Value							# company
 		"`t" + $m.Groups[1].Value					# role
-		"`t" + $base_url + $m.Groups[2].Value		# link
-		
 		
 		$match2 = [regex]::Match($m.Groups[4].Value, "\n\n(.+?per (hour|jam|week|minggu|month|bulan|year|tahun))")
 		if ($match2) {
 			"`t" + $match2.Groups[1].Value			# salary
 		}
+
+		"`t" + $base_url + $m.Groups[2].Value		# link
 		
-		'------------------------'
+		''
 	}
 }
 
