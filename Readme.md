@@ -4,8 +4,8 @@
 PS > ./jobstreet.ps1
 jobstreet.ps1 — Search jobs with specific keyword
 Usage:
-        jobstreet [URL1] [URL2]
-        '[URL1]', '[URL2]', '[URL3]' | jobstreet
+        jobstreet [KEYWORD1] [KEYWORD2]
+        '[KEYWORD1]', '[KEYWORD2]' | jobstreet
 ```
 
 
