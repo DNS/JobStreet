@@ -5,7 +5,8 @@ from selenium.webdriver.common.by import By
 import json, sys, html2text
 
 options = webdriver.FirefoxOptions()
-options.add_argument("-headless")
+#options.add_argument("-headless")
+options.set_preference('javascript.enabled', False)
 
 # make sure you have no other instance of firefox running that uses this profile or it will throw an error without a helpful message
 #options.add_argument('-profile')
@@ -31,7 +32,7 @@ print(parsed_json)
 #options.FirefoxProfile = fp
 driver = webdriver.Firefox(options=options)
 #driver.get(f'{sys.argv[1]}')
-driver.get('https://id.jobstreet.com/jobs-in-information-communication-technology/remote')
+driver.get(sys.argv[1])
 content = driver.page_source
 
 h = html2text.HTML2Text()
