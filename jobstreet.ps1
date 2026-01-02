@@ -1,10 +1,10 @@
 if ($args) {
-	$bulk_url = $args
+	$bulk = $args
 } else {
-	$bulk_url = $input | % { $_ }
+	$bulk = $input | % { $_ }
 }
 
-if (-not $bulk_url) {
+if (-not $bulk) {
 	Write-Output 'jobstreet.ps1 — Search jobs with specific keyword'
 	Write-Output 'Usage:'
 	Write-Output '	jobstreet [KEYWORD1] [KEYWORD2]'
