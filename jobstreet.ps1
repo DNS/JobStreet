@@ -12,16 +12,16 @@ if (-not $bulk) {
 	exit
 }
 
-
 ############################
 
+$base_url = 'https://id.jobstreet.com'
 
 function job_search ($url) {
 	python3 ./crawl.py $url 2>&1 | Tee-Object -Variable a | Out-Null
 	$a = $a -join "`n"
 
 
-	$base_url = 'https://id.jobstreet.com'
+	
 
 	$match1 = [regex]::Matches($a, "(?ims)###.*?\[(.+?)\]\((.+?)\)\n\nat \[(.+?)\](.+?)\!\[\]")
 
@@ -43,5 +43,5 @@ function job_search ($url) {
 }
 
 #$target_url = 'https://id.jobstreet.com/jobs-in-information-communication-technology/remote'
-$bulk_url | %{ job_search "https://id.jobstreet.com/$_-jobs" }
+$bulk | %{ $_ -replace ' ', '-' } | %{ job_search "https://id.jobstreet.com/$_-jobs" }
 
