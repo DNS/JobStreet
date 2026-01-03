@@ -5,10 +5,10 @@ if ($args) {
 }
 
 if (-not $bulk) {
-	Write-Output 'jobstreet.ps1 — Search jobs with specific keyword'
+	Write-Output 'glints.ps1 — Search jobs with specific keyword'
 	Write-Output 'Usage:'
-	Write-Output '	jobstreet [KEYWORD1] [KEYWORD2]'
-	Write-Output "	'[KEYWORD1]', '[KEYWORD2]' | jobstreet"
+	Write-Output '	glints [KEYWORD1] [KEYWORD2]'
+	Write-Output "	'[KEYWORD1]', '[KEYWORD2]' | glints"
 	exit
 }
 
